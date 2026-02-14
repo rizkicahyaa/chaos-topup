@@ -1,31 +1,30 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import GameSection from "./components/GameSection";
+import PromoSection from "./components/PromoSection";
 
 function App() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black">
+        <div className="min-h-screen bg-gray-50">
             <Navbar />
+            <Hero />
 
-            <main className="pt-24 pb-16 px-6">
-                <div className="max-w-4xl mx-auto">
-                    {/* Hero Section */}
-                    <div className="text-center space-y-6 py-20">
-                        <div className="inline-block px-4 py-1.5 bg-red-950/30 text-red-400 rounded-full text-sm font-medium mb-4 border border-red-900/30">Top-up Game Terpercaya</div>
+            {/* Main Content */}
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+                <GameSection />
+                <PromoSection />
+            </main>
 
-                        <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
-                            Top-up Game <br />
-                            <span className="text-red-500">Mudah & Cepat</span>
-                        </h1>
-
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">Nikmati pengalaman top-up game favoritmu dengan proses yang mudah, harga terbaik, dan layanan 24/7.</p>
-
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                            <button className="w-full sm:w-auto px-8 py-3.5 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all shadow-sm hover:shadow-md">Mulai Sekarang</button>
-                            <button className="w-full sm:w-auto px-8 py-3.5 bg-gray-800 hover:bg-gray-700 text-gray-100 font-medium rounded-lg border border-gray-700 transition-all">Lihat Game</button>
-                        </div>
+            {/* Footer */}
+            <footer className="bg-gray-900 text-white py-8 mt-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div className="text-center">
+                        <p className="text-gray-400 text-sm">© 2026 Chaos Top-up. All rights reserved.</p>
+                        <p className="text-gray-500 text-xs mt-2">Top-up game murah, cepat, dan terpercaya</p>
                     </div>
                 </div>
-            </main>
+            </footer>
         </div>
     );
 }
