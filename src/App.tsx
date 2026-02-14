@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black">
+            <Navbar />
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <main className="pt-24 pb-16 px-6">
+                <div className="max-w-4xl mx-auto">
+                    {/* Hero Section */}
+                    <div className="text-center space-y-6 py-20">
+                        <div className="inline-block px-4 py-1.5 bg-red-950/30 text-red-400 rounded-full text-sm font-medium mb-4 border border-red-900/30">Top-up Game Terpercaya</div>
+
+                        <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+                            Top-up Game <br />
+                            <span className="text-red-500">Mudah & Cepat</span>
+                        </h1>
+
+                        <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">Nikmati pengalaman top-up game favoritmu dengan proses yang mudah, harga terbaik, dan layanan 24/7.</p>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                            <button className="w-full sm:w-auto px-8 py-3.5 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all shadow-sm hover:shadow-md">Mulai Sekarang</button>
+                            <button className="w-full sm:w-auto px-8 py-3.5 bg-gray-800 hover:bg-gray-700 text-gray-100 font-medium rounded-lg border border-gray-700 transition-all">Lihat Game</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
 }
 
-export default App
+export default App;
