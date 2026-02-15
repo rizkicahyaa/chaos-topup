@@ -1,88 +1,92 @@
 import { useState } from "react";
-
-interface Game {
-    id: number;
-    name: string;
-    image: string;
-    icon: string;
-}
+import { Gamepad2 } from "lucide-react";
 
 const GameSection = () => {
-    const games: Game[] = [
-        {
-            id: 1,
-            name: "Mobile Legends",
-            image: "/images/mlbb.jpg",
-            icon: "/images/games/mlbb.webp",
-        },
-        {
-            id: 2,
-            name: "Genshin Impact",
-            image: "/images/genshin.jpg",
-            icon: "/images/games/genshin.webp",
-        },
-        {
-            id: 3,
-            name: "Honkai: Star Rail",
-            image: "/images/hsr.jpg",
-            icon: "/images/games/hsr.webp",
-        },
-        {
-            id: 4,
-            name: "Zenless Zone Zero",
-            image: "/images/zenless.png",
-            icon: "/images/games/zenless.webp",
-        },
-        {
-            id: 5,
-            name: "Wuthering Waves",
-            image: "/images/wuwa.webp",
-            icon: "/images/wuwa.webp",
-        },
-        {
-            id: 6,
-            name: "Arknights: Endfield",
-            image: "/images/endfield.webp",
-            icon: "/images/endfield.webp",
-        },
-    ];
-
     const [imageErrors, setImageErrors] = useState<{ [key: number]: boolean }>({});
 
     const handleImageError = (gameId: number) => {
         setImageErrors((prev) => ({ ...prev, [gameId]: true }));
     };
 
-    return (
-        <section className="mb-10">
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold text-white">Game Populer</h2>
-                <a href="#" className="text-teal-400 font-semibold hover:text-teal-300">
-                    Lihat Semua →
-                </a>
-            </div>
+    const games = [
+        { id: 1, name: "Mobile Legends", image: "/images/mlbb.jpg" },
+        { id: 2, name: "Genshin Impact", image: "/images/genshin.jpg" },
+        { id: 3, name: "Honkai: Star Rail", image: "/images/hsr.jpg" },
+        { id: 4, name: "Zenless Zone Zero", image: "/images/zenless.png" },
+        { id: 5, name: "Wuthering Waves", image: "/images/wuwa.webp" },
+        { id: 6, name: "Arknights: Endfield", image: "/images/endfield.webp" },
+    ];
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
-                {games.map((game) => (
-                    <div key={game.id} className="bg-orange-900/50 rounded-lg p-3 hover:bg-orange-800/50 transition-colors cursor-pointer group">
-                        <div className="relative mb-2 overflow-hidden rounded-lg bg-orange-800">
-                            {!imageErrors[game.id] ? (
-                                <img src={game.image} alt={game.name} className="w-full aspect-square object-cover transform group-hover:scale-110 transition-transform duration-300" onError={() => handleImageError(game.id)} />
-                            ) : (
-                                <div className="w-full aspect-square flex items-center justify-center">
-                                    <div className="text-center p-2">
-                                        <div className="w-16 h-16 mx-auto mb-2 bg-orange-200 rounded-full flex items-center justify-center">
-                                            <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                        <p className="text-xs font-semibold text-gray-200 text-center group-hover:text-teal-300">{game.name}</p>
+    return (
+        <section className="py-12 px-4 sm:px-6">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-8">
+                    <div>
+                        <h2 className="text-3xl font-bold text-white mb-2">Game Populer</h2>
+                        <p className="text-gray-400">Pilih game favoritmu untuk top-up</p>
                     </div>
-                ))}
+                    <a
+                        href="#"
+                        className="px-6 py-3 rounded-xl font-medium transition-all text-white"
+                        style={{
+                            backgroundColor: "rgba(89, 201, 165, 0.1)",
+                            border: "1px solid rgba(89, 201, 165, 0.3)",
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "rgba(89, 201, 165, 0.2)";
+                            e.currentTarget.style.color = "#59C9A5";
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "rgba(89, 201, 165, 0.1)";
+                            e.currentTarget.style.color = "white";
+                        }}
+                    >
+                        Lihat Semua →
+                    </a>
+                </div>
+
+                {/* Game Grid - Larger Cards */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    {games.map((game) => (
+                        <div key={game.id} className="group cursor-pointer">
+                            <div
+                                className="rounded-2xl p-4 backdrop-blur-sm transition-all"
+                                style={{
+                                    backgroundColor: "rgba(35, 57, 91, 0.4)",
+                                    border: "1px solid rgba(89, 201, 165, 0.2)",
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = "rgba(35, 57, 91, 0.6)";
+                                    e.currentTarget.style.borderColor = "#59C9A5";
+                                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(89, 201, 165, 0.2)";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = "rgba(35, 57, 91, 0.4)";
+                                    e.currentTarget.style.borderColor = "rgba(89, 201, 165, 0.2)";
+                                    e.currentTarget.style.boxShadow = "none";
+                                }}
+                            >
+                                <div
+                                    className="relative mb-3 overflow-hidden rounded-xl"
+                                    style={{
+                                        backgroundColor: "rgba(35, 57, 91, 0.8)",
+                                        aspectRatio: "1",
+                                    }}
+                                >
+                                    {!imageErrors[game.id] ? (
+                                        <img src={game.image} alt={game.name} className="w-full h-full object-cover transition-transform duration-300" onError={() => handleImageError(game.id)} />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center">
+                                            <Gamepad2 className="w-12 h-12" style={{ color: "#59C9A5" }} />
+                                        </div>
+                                    )}
+                                </div>
+                                <h3 className="text-sm font-semibold text-gray-200 text-center transition-colors group-hover:text-white">{game.name}</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
