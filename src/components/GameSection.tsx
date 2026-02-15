@@ -9,7 +9,7 @@ const GameSection = () => {
             </div>
 
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
-                {["Mobile Legends", "Free Fire", "PUBG Mobile", "Genshin Impact", "Valorant", "Call of Duty", "Honkai Star Rail", "League of Legends"].map((game, idx) => (
+                {["Mobile Legends", "Genshin Impact", "Honkai Star Rail", "Valorant", "Call of Duty"].map((game, idx) => (
                     <div key={idx} className="bg-white rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer border-2 border-transparent hover:border-orange-500 group">
                         <div className="w-full aspect-square bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg mb-2"></div>
                         <p className="text-xs font-semibold text-gray-700 text-center group-hover:text-orange-600">{game}</p>
