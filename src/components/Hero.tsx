@@ -2,7 +2,7 @@ import { Zap, Shield, Clock } from "lucide-react";
 
 const Hero = () => {
     return (
-        <section className="pt-32 pb-20 px-4 sm:px-6">
+        <section className="pt-40 pb-20 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
@@ -88,9 +88,9 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="relative hidden md:block max-w-lg mx-auto">
+                    <div className="relative mx-auto">
                         <div
-                            className="p-8 rounded-3xl backdrop-blur-xl"
+                            className="p-6 md:p-8 rounded-3xl backdrop-blur-xl"
                             style={{
                                 background: "linear-gradient(135deg, rgba(216, 30, 91, 0.2), rgba(89, 201, 165, 0.2))",
                                 border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -101,10 +101,11 @@ const Hero = () => {
                                 className="rounded-2xl overflow-hidden"
                                 style={{
                                     background: "linear-gradient(135deg, #D81E5B, #59C9A5)",
-                                    aspectRatio: "16/9",
+                                    maxHeight: "450px",
+                                    maxWidth: "450px",
                                 }}
                             >
-                                <img src="/images/poster-games.png" alt="Gaming" className="w-full h-full object-cover" />
+                                <img src="/images/poster-games.png" alt="Gaming" className="w-full h-full object-contain" />
                             </div>
                         </div>
 

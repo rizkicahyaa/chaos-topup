@@ -21,14 +21,14 @@ const GameSection = () => {
         <section className="py-12 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
                     <div>
                         <h2 className="text-3xl font-bold text-white mb-2">Game Populer</h2>
                         <p className="text-gray-400">Pilih game favoritmu untuk top-up</p>
                     </div>
                     <a
                         href="#"
-                        className="px-6 py-3 rounded-xl font-medium transition-all text-white"
+                        className="px-6 py-3 rounded-xl transition-all text-white text-sm font-medium whitespace-nowrap"
                         style={{
                             backgroundColor: "rgba(89, 201, 165, 0.1)",
                             border: "1px solid rgba(89, 201, 165, 0.3)",
@@ -42,7 +42,7 @@ const GameSection = () => {
                             e.currentTarget.style.color = "white";
                         }}
                     >
-                        Lihat Semua →
+                        Game Lainnya
                     </a>
                 </div>
 
