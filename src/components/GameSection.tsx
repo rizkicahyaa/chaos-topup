@@ -56,16 +56,16 @@ const GameSection = () => {
     return (
         <section className="mb-10">
             <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Game Populer</h2>
-                <a href="#" className="text-orange-600 font-semibold hover:text-orange-700">
+                <h2 className="text-2xl font-bold text-white">Game Populer</h2>
+                <a href="#" className="text-teal-400 font-semibold hover:text-teal-300">
                     Lihat Semua →
                 </a>
             </div>
 
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
                 {games.map((game) => (
-                    <div key={game.id} className="bg-white rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer border-2 border-transparent hover:border-orange-500 group">
-                        <div className="relative mb-2 overflow-hidden rounded-lg bg-gradient-to-br from-orange-100 to-orange-50">
+                    <div key={game.id} className="bg-orange-900/50 rounded-lg p-3 hover:bg-orange-800/50 transition-colors cursor-pointer group">
+                        <div className="relative mb-2 overflow-hidden rounded-lg bg-orange-800">
                             {!imageErrors[game.id] ? (
                                 <img src={game.image} alt={game.name} className="w-full aspect-square object-cover transform group-hover:scale-110 transition-transform duration-300" onError={() => handleImageError(game.id)} />
                             ) : (
@@ -80,7 +80,7 @@ const GameSection = () => {
                                 </div>
                             )}
                         </div>
-                        <p className="text-xs font-semibold text-gray-700 text-center group-hover:text-orange-600">{game.name}</p>
+                        <p className="text-xs font-semibold text-gray-200 text-center group-hover:text-teal-300">{game.name}</p>
                     </div>
                 ))}
             </div>
