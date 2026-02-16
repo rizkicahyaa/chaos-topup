@@ -32,8 +32,8 @@ const PromoSection = () => {
                             </div>
                             <span className="text-sm font-semibold opacity-90">DISKON 20%</span>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">Semua Diamond MLBB</h3>
-                        <p className="text-sm opacity-90 mb-6">Berlaku hingga 20 Feb 2026</p>
+                        <h3 className="text-2xl font-bold mb-2">Diamond Mobile Legends</h3>
+                        <p className="text-sm opacity-90 mb-6">Semua nominal diamond, berlaku s/d 28 Feb 2026</p>
                         <button className="w-full px-4 py-3 bg-white rounded-xl font-semibold text-sm transition-all" style={{ color: "#59C9A5" }} onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")} onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "white")}>
                             Beli Sekarang →
                         </button>
@@ -59,10 +59,10 @@ const PromoSection = () => {
                             <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}>
                                 <Gift className="w-6 h-6" />
                             </div>
-                            <span className="text-sm font-semibold opacity-90">CASHBACK 15%</span>
+                            <span className="text-sm font-semibold opacity-90">BONUS 10%</span>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">Top-up Free Fire</h3>
-                        <p className="text-sm opacity-90 mb-6">Minimal pembelian 100rb</p>
+                        <h3 className="text-2xl font-bold mb-2">Genesis Crystal Genshin</h3>
+                        <p className="text-sm opacity-90 mb-6">Bonus extra crystal, minimal pembelian 150rb</p>
                         <button className="w-full px-4 py-3 bg-white rounded-xl font-semibold text-sm transition-all" style={{ color: "#D81E5B" }} onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")} onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "white")}>
                             Beli Sekarang →
                         </button>
@@ -90,11 +90,11 @@ const PromoSection = () => {
                                 <Sparkles className="w-6 h-6" style={{ color: "#59C9A5" }} />
                             </div>
                             <span className="text-sm font-semibold" style={{ color: "#59C9A5" }}>
-                                PROMO SPESIAL
+                                CASHBACK 15%
                             </span>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">Bundle Hemat PUBG</h3>
-                        <p className="text-sm opacity-90 mb-6">Hemat hingga 30%</p>
+                        <h3 className="text-2xl font-bold mb-2">Oneiric Shard HSR</h3>
+                        <p className="text-sm opacity-90 mb-6">Paket Honkai Star Rail, hemat hingga 25%</p>
                         <button className="w-full px-4 py-3 bg-white rounded-xl font-semibold text-sm transition-all" style={{ color: "#59C9A5" }} onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")} onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "white")}>
                             Beli Sekarang →
                         </button>
