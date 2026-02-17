@@ -47,7 +47,7 @@ const GameSection = () => {
                 </div>
 
                 {/* Game Grid - Larger Cards */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
                     {games.map((game) => (
                         <div key={game.id} className="group cursor-pointer">
                             <div
